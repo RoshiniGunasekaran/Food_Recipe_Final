@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    --color-white-100: hsl(205, 5%, 100%);
+    --color-white-200: hsl(205, 5%, 90%);
+    --color-white-300: hsl(205, 5%, 80%);
+    --color-white-400: hsl(205, 5%, 65%);
+    --color-white-500: hsl(205, 5%, 50%);
+    --color-black-100: hsl(210, 15%, 12%);
+    --color-black-200: hsl(210, 15%, 10%);
+    --color-black-300: hsl(210, 15%, 8%);
+    --color-black-400: hsl(210, 15%, 6%);
+    --color-black-500: hsl(210, 15%, 4%);
+    --color-brown-100: hsl(355, 8%, 70%);
+    --color-brown-200: hsl(355, 8%, 60%);
+    --color-brown-300: hsl(355, 8%, 50%);
+    --color-brown-400: hsl(355, 8%, 40%);
+    --color-brown-500: hsl(355, 8%, 30%);
+    --display-small: clamp(1.71rem, calc(0.39vw + 1.64rem), 1.95rem);
+    --display-base: clamp(2.06rem, calc(0.47vw + 1.96rem), 2.34rem);
+    --display-medium: clamp(2.47rem, calc(0.56vw + 2.36rem), 2.9rem);
+    --display-large: clamp(2.97rem, calc(0.68vw + 2.83rem), 3.37rem);
+    --display-extra: clamp(3.57rem, calc(0.81vw + 3.39rem), 4.05rem);
+    --text-tiny: clamp(0.84rem, calc(0.12vw + 0.8rem), 0.89rem);
+    --text-small: clamp(0.93rem, calc(0.13vw + 0.91rem), 1rem);
+    --text-base: clamp(1.05rem, calc(0.15vw + 1.01rem), 1.12rem);
+    --text-medium: clamp(1.18rem, calc(0.17vw + 1.14rem), 1.26rem);
+    --text-large: clamp(1.32rem, calc(0.19vw + 1.28rem), 1.41rem);
+    --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", system-ui, ui-sans-serif, sans-serif;
+    background-color: var(--color-white-100); /* White background covers the page */
+    color: var(--color-black-100);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* Full-page overlay to cover the entire screen */
+.wrapper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-white-100);
+    z-index: 0;
+}
+
+/* Wrapper Section */
+.wrapper-section {
+    padding: 4rem 0;
+    position: relative;
+    z-index: 1; /* Make sure content is above the overlay */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper-bgimage {
+    width: 40%;
+    margin-right: 2rem; /* Space between the image and content */
+}
+
+.wrapper-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Wrapper Content */
+.wrapper-content {
+    text-align: left;
+    max-width: 50%;
+}
+
+.wrapper-inform {
+    margin-top: 2rem;
+}
+
+.wrapper-inform .badge {
+    font-size: var(--text-small);
+    color: var(--color-white-100);
+    background-color: var(--color-brown-400);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.wrapper-inform h1 {
+    font-size: var(--display-large);
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--color-black-100);
+}
+
+.wrapper-inform p {
+    font-size: var(--text-base);
+    color: var(--color-black-200);
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+.main{
+    font-size: 12px;
+}
